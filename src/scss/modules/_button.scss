@@ -1,0 +1,66 @@
+@import '../_variables';
+@import '../_mixins';
+
+.button {
+  @include main-margin-bottom;
+  @include main-padding;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $button-font;
+
+  &__link {
+    display: block;
+    padding: $button-padding;
+    font-size: $button-font-size;
+    line-height: $button-line-height;
+    border-radius: $button-border-radius;
+    border: 1px solid $button-color;
+    color: $button-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    margin: 30px 0;
+
+    &--black {
+      background-color: $button-color;
+      color: $white;
+    }
+  }
+
+  &__link-with-arrow {
+    font-size: $button-font-size;
+    color: $button-color;
+    line-height: $button-line-height;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    margin: 30px 0;
+
+    &::before {
+      content: url(../assets/images/arrow.svg);
+      display: inline-block;
+      transform: translate(-14px, -1px);
+      transition: 0.3s;
+    }
+
+    &:hover {
+      &::before {
+        transform: translate(-10px, -1px);
+      }
+    }
+  }
+
+  &__link-underlined {
+    font-size: $button-font-size;
+    color: $button-color;
+    line-height: $button-line-height;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    margin: 30px 0;
+    border-bottom: 1px solid $main-color;
+  }
+}

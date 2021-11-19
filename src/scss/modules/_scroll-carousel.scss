@@ -1,0 +1,33 @@
+@import '../_variables';
+@import '../_mixins';
+
+.scroll-carousel {
+  @include main-margin-bottom;
+  width: 100%;
+  text-align: right;
+  overflow-y: hidden;
+  overflow-x: auto;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+
+  &__container {
+    width: 1100px;
+
+    @media (max-width: $breakpoint-mobile-width) {
+      width: 950px;
+    }
+  }
+
+  &__item {
+    width: 183px;
+    display: inline-block;
+  }
+
+  &__image {
+    width: calc(100% - 10px);
+    display: block;
+  }
+}

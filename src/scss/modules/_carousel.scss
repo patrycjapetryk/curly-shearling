@@ -1,0 +1,48 @@
+@import '../_variables';
+@import '../_mixins';
+
+.carousel {
+  @include main-margin-bottom;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+
+  &__container {
+    width: 300%;
+    display: flex;
+    justify-content: space-around;
+    animation: carousel 20s linear infinite;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+
+    &--reverse {
+      animation: carousel 18s linear infinite reverse;
+    }
+
+    @media (max-width: $breakpoint-mobile-width) {
+      width: 600%;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    width: calc(100% - 20px);
+    display: block;
+  }
+}
+
+@keyframes carousel {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-66.66%);
+  }
+}

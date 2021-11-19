@@ -1,0 +1,114 @@
+@import '../_variables';
+@import '../_mixins';
+
+.gallery {
+  @include main-margin;
+  @include main-padding;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--right {
+    justify-content: flex-end;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 70%;
+    position: relative;
+
+    @media (max-width: $breakpoint-mobile-width) {
+      width: 100%;
+    }
+
+    &--l {
+      width: 65%;
+
+      @media (max-width: $breakpoint-mobile-width) {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+
+    &--m {
+      width: 49%;
+
+      @media (max-width: $breakpoint-mobile-width) {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+
+    &--s {
+      width: 33%;
+
+      @media (max-width: $breakpoint-mobile-width) {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+
+    &--xs {
+      width: 24%;
+      margin: 0 0 16px;
+
+      @media (max-width: $breakpoint-tablet-width) {
+        width: 49%;
+      }
+
+      @media (max-width: $breakpoint-mobile-width) {
+        width: 100%;
+      }
+    }
+
+    &--vertical-align-bottom {
+      justify-content: flex-end;
+    }
+
+    &--vertical-align-center {
+      justify-content: center;
+    }
+
+    &--vertical-align-space-between {
+      justify-content: space-between;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    display: block;
+  }
+
+  &__title {
+    width: 100%;
+    font-size: $global-font-size-m;
+    font-weight: $global-font-weight;
+    margin: 30px 0;
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__cta {
+    display: inline-block;
+    color: $button-color;
+    padding: $button-padding;
+    font-family: $button-font;
+    font-size: $button-font-size;
+    border-radius: $button-border-radius;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0;
+    border: 1px solid $button-color;
+  }
+}

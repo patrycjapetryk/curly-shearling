@@ -1,0 +1,36 @@
+@import '_variables';
+
+@mixin reset-margin {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin main-margin {
+  margin: $margin-desktop 0;
+
+  @media (max-width: $breakpoint-mobile-width) {
+    margin: $margin-mobile 0;
+  }
+}
+
+@mixin main-margin-bottom {
+  margin: 0 0 $margin-desktop 0;
+
+  @media (max-width: $breakpoint-mobile-width) {
+    margin: 0 0 $margin-mobile 0;
+  }
+}
+
+@mixin main-margin-top {
+  margin: $margin-desktop 0 0;
+
+  @media (max-width: $breakpoint-mobile-width) {
+    margin: $margin-mobile 0 0;
+  }
+}
+
+@mixin main-padding {
+  @media (max-width: $main-max-width) {
+    padding: 0 $padding-mobile;
+  }
+}

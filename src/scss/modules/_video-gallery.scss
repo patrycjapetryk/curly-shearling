@@ -1,0 +1,20 @@
+@import '../_variables';
+@import '../_mixins';
+
+.video-gallery {
+  @include main-margin;
+  @include main-padding;
+  width: 100%;
+  position: relative;
+
+  &__video {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+
+    @media (max-width: $breakpoint-mobile-width) {
+      width: 100%;
+    }
+  }
+}

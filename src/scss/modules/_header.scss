@@ -5,6 +5,7 @@
   @include main-margin;
   // @include main-padding;
   position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,6 +29,7 @@
 
   &__image {
     width: 100%;
+    height: auto;
     display: block;
   }
 

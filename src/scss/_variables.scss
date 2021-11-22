@@ -19,16 +19,16 @@ $second-font: 'Univers LT W05_55 Roman', sans-serif;
 
 // fonts size
 
-$global-font-size: 16px;
+$global-font-size: 15px;
 $global-font-size-s: 10px;
-$global-font-size-m: 14px;
+$global-font-size-m: 13px;
 $global-font-size-l: 40px;
 
 // button
 
 $button-font: $main-font;
-$button-font-size: 12px;
-$button-line-height: 1.4;
+$button-font-size: 14px;
+$button-line-height: 1.3;
 $button-padding: 10px 40px;
 $button-color: $black;
 // $button-border-radius: 20px;
@@ -40,8 +40,8 @@ $global-letter-spacing: normal;
 
 // margins and padding
 
-$margin-desktop: 100px;
-$margin-mobile: 60px;
+$margin-desktop: 60px;
+$margin-mobile: 50px;
 $padding-mobile: 15px;
 
 // breakpoints

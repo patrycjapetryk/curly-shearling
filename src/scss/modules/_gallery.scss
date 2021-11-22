@@ -2,7 +2,7 @@
 @import '../_mixins';
 
 .gallery {
-  @include main-margin;
+  @include main-margin-bottom;
   @include main-padding;
   width: 100%;
   text-align: left;
@@ -39,11 +39,12 @@
     }
 
     &--m {
-      width: 49%;
+      width: 38%;
+      margin: 0 6%;
 
       @media (max-width: $breakpoint-mobile-width) {
         width: 100%;
-        margin-bottom: 30px;
+        margin: 0 8% 30px;
       }
     }
 
@@ -82,6 +83,17 @@
     }
   }
 
+  &__wrapper {
+    position: relative;
+  }
+
+  &__image-title {
+    position: absolute;
+    top: -6%;
+    right: -5%;
+    width: 200%;
+  }
+
   &__image {
     width: 100%;
     display: block;
@@ -92,6 +104,7 @@
     font-size: $global-font-size-m;
     font-weight: $global-font-weight;
     margin: 30px 0;
+    text-transform: uppercase;
   }
 
   &__link {
@@ -101,14 +114,10 @@
 
   &__cta {
     display: inline-block;
-    color: $button-color;
-    padding: $button-padding;
-    font-family: $button-font;
     font-size: $button-font-size;
-    border-radius: $button-border-radius;
-    text-transform: uppercase;
+    color: $button-color;
+    line-height: $button-line-height;
     text-decoration: none;
-    margin: 0;
-    border: 1px solid $button-color;
+    border-bottom: 1px solid $main-color;
   }
 }

@@ -2,7 +2,7 @@
 @import '../_mixins';
 
 .button {
-  @include main-margin-bottom;
+  // @include main-margin-bottom;
   @include main-padding;
   width: 100%;
   text-align: center;
@@ -24,6 +24,11 @@
     letter-spacing: 0.02em;
     margin: 30px 0 0;
     transition: 0.2s ease-in-out;
+
+    &:hover {
+      background-color: $button-color;
+      color: $white;
+    }
 
     &--black {
       background-color: $button-color;

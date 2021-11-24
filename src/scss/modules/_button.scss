@@ -22,8 +22,8 @@
     // text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.02em;
-    margin: 30px 0;
-    transition: 0.4s ease-in-out;
+    margin: 30px 0 0;
+    transition: 0.2s ease-in-out;
 
     &--black {
       background-color: $button-color;
@@ -33,6 +33,10 @@
         background-color: $white;
         color: $button-color;
       }
+    }
+
+    &--smaller-margin {
+      margin: 10px 0;
     }
   }
 

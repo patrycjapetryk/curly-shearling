@@ -2,7 +2,7 @@
 @import '../_mixins';
 
 .header {
-  @include main-margin;
+  @include main-margin-top;
   // @include main-padding;
   position: relative;
   width: 100%;

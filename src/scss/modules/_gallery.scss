@@ -3,15 +3,18 @@
 
 .gallery {
   @include main-margin-bottom;
-  @include main-padding;
+  // @include main-padding;
+
   width: 100%;
   text-align: left;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  position: relative;
 
   &--center {
     justify-content: center;
+    gap: 4%;
   }
 
   &--right {
@@ -22,12 +25,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 70%;
+    width: 100%;
     position: relative;
-
-    @media (max-width: $breakpoint-mobile-width) {
-      width: 100%;
-    }
 
     &--l {
       width: 65%;
@@ -49,11 +48,19 @@
     }
 
     &--s {
-      width: 33%;
+      width: 36%;
 
       @media (max-width: $breakpoint-mobile-width) {
         width: 100%;
-        margin-bottom: 30px;
+        margin: 0 8% 30px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      &:first-child {
+        margin-top: 60px;
       }
     }
 
@@ -91,7 +98,8 @@
     position: absolute;
     top: -6%;
     right: -5%;
-    width: 200%;
+    width: 195%;
+    pointer-events: none;
   }
 
   &__image {
@@ -104,7 +112,7 @@
     width: 100%;
     font-size: $global-font-size-m;
     font-weight: $global-font-weight;
-    margin: 30px 0;
+    margin: 15px 0 10px;
     text-transform: uppercase;
   }
 

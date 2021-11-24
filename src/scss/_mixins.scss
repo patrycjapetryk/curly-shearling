@@ -29,6 +29,8 @@
   }
 }
 
+// Padding
+
 @mixin main-padding {
   @media (max-width: $main-max-width) {
     padding: 0 $padding-mobile;

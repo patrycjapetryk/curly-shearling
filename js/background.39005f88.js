@@ -1,0 +1,1 @@
+(()=>{var e=document.querySelector(".background--js"),n=function(){var n;e.style.opacity=((n=1-1e-4*window.scrollY)>1?n=.7:n<.4&&(n=.3),n)};document.addEventListener("scroll",n),window.addEventListener("resize",n),window.addEventListener("load",n)})();

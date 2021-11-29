@@ -3,7 +3,7 @@
 
 .gallery {
   @include main-margin-bottom;
-  // @include main-padding;
+  @include main-padding;
 
   width: 100%;
   text-align: left;

@@ -4,9 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     index: './src/js/index.js',
-    background: './src/js/background.js',
     scroll: './src/js/scroll.js',
-    carousel: './src/js/carousel.js',
     titleAnimation: './src/js/titleAnimation.js',
   },
   output: {

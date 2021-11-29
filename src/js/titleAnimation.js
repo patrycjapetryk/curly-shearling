@@ -1,5 +1,8 @@
 import * as PIXI from 'pixi.js';
 
+import titleImage from '../assets/images/title-1.png';
+import displacementMap from '../assets/images/displacement-map.jpeg';
+
 const app = new PIXI.Application({
   width: 1085,
   height: 85,
@@ -15,18 +18,15 @@ app.stage.interactive = true;
 const container = new PIXI.Container();
 app.stage.addChild(container);
 
-const flag = PIXI.Sprite.from(
-  'https://patrycjapetryk.github.io/curly-shearling/images/title-1.a8892033.png',
-);
+const flag = PIXI.Sprite.from(titleImage);
 container.addChild(flag);
 flag.width = app.screen.width - 20;
 flag.height = app.screen.height - 20;
 flag.x = 10;
 flag.y = 10;
 
-const displacementSprite = PIXI.Sprite.from(
-  'https://pixijs.io/examples/examples/assets/pixi-filters/displacement_map_repeat.jpg',
-);
+const displacementSprite = PIXI.Sprite.from(displacementMap);
+
 // Make sure the sprite is wrapping.
 displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
 const displacementFilter = new PIXI.filters.DisplacementFilter(

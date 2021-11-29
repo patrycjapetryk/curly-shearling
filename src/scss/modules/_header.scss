@@ -25,6 +25,10 @@
     top: 48%;
     width: 80%;
     transform: translateX(-50%);
+
+    canvas {
+      width: 100%;
+    }
   }
 
   &__image {
